@@ -16,7 +16,7 @@ const Blog = ({blogfiles}) => {
 
     return (
         <div className="container blogcontainer">
-            <div class="mt-5">
+            <div className="mt-5">
                 <ReactMarkdown
                     children={content}
                     remarkPlugins={[remarkGfm]}

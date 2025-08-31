@@ -49,10 +49,9 @@ export default function Home() {
             target="_blank"
             className="introLink hover-underline-animation"
           >
-            Toronto Metropolitan University
+            TMU
           </Link>{" "}
-          in my senior year. Interested in distributed systems, high performance
-          backend architectures and AI/ML, I like challenging myself to do
+          in my senior year graduating in May 2026. Interested in distributed systems, backend engineering and infrastructure, I like challenging myself to do
           things I’ve never accomplished before and I strive to learn, build,
           and engineer stuff.
         </p>

@@ -31,7 +31,7 @@ const Misc = () => {
               <div className="text-left mb-3">
                 <div className="h4">{project['name']}</div>
                 <div className="h5">
-                  <a href={project['linkurl']} className="hover-underline-animation" style={{ textDecoration: "none", color: "#4d94ff", fontSize: "15.5px" }} target='__blank'>{project['link']}<i class="bi bi-link-45deg"></i></a>
+                  <a href={project['linkurl']} className="hover-underline-animation" style={{ textDecoration: "none", color: "#4d94ff", fontSize: "15.5px" }} target='__blank'>{project['link']}<i className="bi bi-link-45deg"></i></a>
                 </div>
               </div>
               <div className='projectDescriptionFontSize'>{project['description']}</div>
