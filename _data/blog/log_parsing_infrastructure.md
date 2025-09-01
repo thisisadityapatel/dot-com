@@ -3,13 +3,13 @@
 
 <br>
 
-Modern CI/CD pipelines generate massive volumes of unstructured log data that contain critical insights about deployment failures and performance bottlenecks, requiring sophisticated real-time processing infrastructure to extract actionable insights and data from these streams. This data can then be used to generate DevOps Insights (Using [Google DORA](https://dora.dev/guides/dora-metrics-four-keys/), [DevOps SPACE](https://linearb.io/blog/space-framework) frameworks), datasets for machine learning models or for government regulatory needs.
+Modern CI/CD pipelines generate massive volumes of unstructured log data that contain critical insights about deployment failures and performance bottlenecks, requiring real-time processing infrastructure to extract actionable insights and data from these streams. This data can then be used to then generate DevOps Insights ([Google DORA](https://dora.dev/guides/dora-metrics-four-keys/), [DevOps SPACE](https://linearb.io/blog/space-framework) frameworks), clean datasets for machine learning models or for government regulatory needs. In one of my past internships, I worked on something similar related to log parsing, and here is my take and understanding on designing such systems.
 
 <br>
 
 ### Why
 
-In enterprise environments using Github Actions and OpenShift Container Platform, development teams deploy applications hundreds or thousands of times per day across multiple environments, cloud providers, and deployment tools. This technical blog walks through building a high performance log parsing system using a distributed event-driven architecture, to ingest data in a data warehouse (in this case Elasticsearch)
+In enterprise environments using Github Actions and OpenShift Container Platform, development teams deploy applications hundreds or thousands of times per day across multiple environments, cloud providers, and deployment tools. This technical blog walks through building a high performance log parsing system using a distributed event-driven architecture, to ingest data in a data warehouse (Elasticsearch in this case).
 
 <br>
 
@@ -39,7 +39,7 @@ The DAG performs four key operations in sequence:
 
 <br>
 
-##### Storage and Metadata Management
+##### Storage and Metadata
 
 **S3 Storage Strategy**: Log files are organized using datetime-based partitioning to enable parallel processing and efficient retrieval:
 ```
@@ -143,13 +143,13 @@ This code reads Kafka messages from multiple partitions in the topic and each ev
 
 <br>
 
-##### AWS Spark Cluster Setup
+##### AWS Spark Cluster
 
 To set up Spark workers on AWS, you can use several approaches:
 
 **AWS EMR (Managed)**: `aws emr create-cluster --name "LogProcessingCluster" --release-label emr-6.9.0 --instance-groups InstanceGroupType=MASTER,InstanceType=m5.xlarge,InstanceCount=1 InstanceGroupType=CORE,InstanceType=m5.2xlarge,InstanceCount=5`
 
-1 Master node (m5.xlarge), 5 Core nodes (m5.2xlarge)
+1 Master node (m5.xlarge), 5 Core nodes (m5.2xlarge) for the above code.
 
 **EC2 Instances (Self-managed but chaotic)**: Launch EC2 instances with Spark installed and configure them to join the master cluster using the master's IP.
 
@@ -172,7 +172,7 @@ The processor component performs the core work of transforming unstructured log 
 
 <br>
 
-##### PySpark Log Processing Implementation
+##### PySpark Log Processing
 
 Each Spark worker executes the processing logic for assigned deployment keys. The processor follows a five-step workflow:
 
@@ -192,7 +192,7 @@ The processing function handles database connections to PostgreSQL for metadata 
 
 <br>
 
-##### Regular Expression (Regex)
+##### Regular Expression (Regex Magic)
 
 The parser applies multiple layers of regular expressions to extract structured information from diverse log formats. The system defines regex patterns for different log types and components:
 
@@ -212,7 +212,7 @@ The parsing engine processes each log line to extract timestamps, log levels, bu
 
 <br>
 
-##### Elasticsearch Document Update
+##### Elasticsearch Document Warehouse
 
 The final Elasticsearch document contains structured data including parsed log entries organized by type and timestamp, identified build steps with success/failure status, extracted error messages with severity classifications, and calculated metrics such as deployment duration and error rates. Elasticsearch was chosen as our document store because it enables fast dashboard generation and provides powerful search capabilities for developers to query deployment logs.
 
