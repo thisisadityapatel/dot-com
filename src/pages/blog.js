@@ -9,6 +9,7 @@ const blog = () => {
             .then(response => response.json())
             .then(data => setBlogPosts(data));
     }, []);
+
     return (
         <div className="container mt-5">
             <h2 style={{ fontFamily: 'Newspaper, serif, Times New Roman, Georgia, Garamond' }}>the gazette</h2>
