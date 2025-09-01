@@ -83,7 +83,7 @@ const Blog = ({blogfiles}) => {
                 <ReactMarkdown
                     children={content}
                     remarkPlugins={[remarkGfm]}
-                    rehypePlugins={[rehypeRaw]} // Allow raw HTML rendering
+                    rehypePlugins={[rehypeRaw]}
                     components={{
                         code({ node, inline, className, children, ...props }) {
                             const match = /language-(\w+)/.exec(className || "");
