@@ -42,7 +42,7 @@ The DAG performs four key operations in sequence:
 ##### Storage and Metadata
 
 **S3 Storage Strategy**: Log files are organized using datetime-based partitioning to enable parallel processing and efficient retrieval:
-```
+```bash
 s3://deployment-logs/
 ├── year=2024/
 │   ├── month=01/
@@ -53,7 +53,7 @@ s3://deployment-logs/
 
 **PostgreSQL Metadata Tracking**: Maintains a lightweight tracking table to map deployment keys to their S3 location pathways and processing status:
 
-```
+```sql
 CREATE TABLE deployment_metadata (
     id SERIAL PRIMARY KEY,
     deployment_key VARCHAR(255) UNIQUE NOT NULL,
@@ -72,7 +72,7 @@ CREATE TABLE deployment_metadata (
 
 After storing logs and metadata, the DAG publishes an event to Kafka topic attached with the deployment key. This decouples log collection from processing.
 
-```
+```python
 def publish_to_kafka(deployment_key):
     producer = KafkaProducer(
         bootstrap_servers=['kafka-cluster:9092'],
@@ -130,7 +130,7 @@ The consumer component subscribes to Kafka events and manages distributed proces
 
 The Spark master runs a continuous consumer that subscribes to the log processing topic and distributes work across available worker nodes:
 
-```
+```python
 consumer = KafkaConsumer('log-processing-events', group_id='spark-log-processors')
 
 for message in consumer:
@@ -176,7 +176,7 @@ The processor component performs the core work of transforming unstructured log 
 
 Each Spark worker executes the processing logic for assigned deployment keys. The processor follows a five-step workflow:
 
-```
+```python
 def process_deployment_logs(deployment_key):
     try:
         metadata = get_deployment_metadata(deployment_key)             # Query PostgreSQL
@@ -196,7 +196,7 @@ The processing function handles database connections to PostgreSQL for metadata 
 
 The parser applies multiple layers of regular expressions to extract structured information from diverse log formats. The system defines regex patterns for different log types and components:
 
-```
+```python
 patterns = {
     'timestamp': r'(\d{4}-\d{2}-\d{2}[T\s]\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})?)',
     'log_level': r'\b(DEBUG|INFO|WARN|WARNING|ERROR|FATAL|TRACE)\b',

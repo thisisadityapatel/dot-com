@@ -4,7 +4,6 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useRouter } from "next/router";
 import { promises as fs } from 'fs';
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import rehypeRaw from "rehype-raw";
 
 
@@ -24,10 +23,19 @@ const Blog = ({blogfiles}) => {
                     components={{
                         code({ node, inline, className, children, ...props }) {
                             const match = /language-(\w+)/.exec(className || "");
-                            return !inline && match ? (
-                                <SyntaxHighlighter language={match[1]} PreTag="div" {...props}>
-                                    {String(children).replace(/\n$/, "")}
-                                </SyntaxHighlighter>
+                            return !inline ? (
+                                <pre style={{
+                                    backgroundColor: '#f6f8fa',
+                                    borderRadius: '6px',
+                                    padding: '16px',
+                                    overflow: 'auto',
+                                    fontSize: '14px',
+                                    border: '1px solid #e1e4e8'
+                                }}>
+                                    <code className={className} {...props}>
+                                        {children}
+                                    </code>
+                                </pre>
                             ) : (
                                 <code className={className} {...props}>
                                     {children}
