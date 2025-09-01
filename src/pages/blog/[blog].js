@@ -41,7 +41,7 @@ const Blog = ({blogfiles}) => {
                                             borderRadius: '6px',
                                             padding: '16px',
                                             overflow: 'auto',
-                                            fontSize: '14px',
+                                            fontSize: '12px',
                                             border: '1px solid #e1e4e8',
                                             margin: 0
                                         }}>
@@ -103,7 +103,7 @@ const Blog = ({blogfiles}) => {
                                             style={oneLight}
                                             customStyle={{
                                                 borderRadius: '6px',
-                                                fontSize: '14px',
+                                                fontSize: '12px',
                                                 border: '1px solid #e1e4e8',
                                                 margin: 0
                                             }}

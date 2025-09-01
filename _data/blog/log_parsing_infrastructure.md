@@ -3,13 +3,13 @@
 
 <br>
 
-Modern CI/CD pipelines generate massive volumes of unstructured log data that contain critical insights about deployment failures and performance bottlenecks, requiring real-time processing infrastructure to extract actionable insights and data from these streams. This data can then be used to then generate DevOps Insights ([Google DORA](https://dora.dev/guides/dora-metrics-four-keys/), [DevOps SPACE](https://linearb.io/blog/space-framework) frameworks), clean datasets for machine learning models or for government regulatory needs. In one of my past internships, I worked on something similar related to log parsing, and here is my take and understanding on designing such systems.
+One of my past internships, I built and engineered systems for log parsing, which got me interested in how these kinds of platforms are architected. Modern CI/CD pipelines generate massive volumes of unstructured log data that contain critical insights about deployment failures and performance bottlenecks, requiring real-time processing infrastructure to extract actionable data insights from these streams. This data can then be used to then generate DevOps Insights ([Google DORA](https://dora.dev/guides/dora-metrics-four-keys/), [DevOps SPACE](https://linearb.io/blog/space-framework) frameworks), clean datasets for machine learning models, or for government regulatory needs. Here is my take and understanding on designing such systems.
 
 <br>
 
 ### Why
 
-In enterprise environments using Github Actions and OpenShift Container Platform, development teams deploy applications hundreds or thousands of times per day across multiple environments, cloud providers, and deployment tools. This technical blog walks through building a high performance log parsing system using a distributed event-driven architecture, to ingest data in a data warehouse (Elasticsearch in this case).
+In environments using Github Actions and OpenShift Container Platform, development teams deploy applications hundreds or thousands of times per day across multiple environments, cloud providers, and deployment tools. This technical blog walks through building a high performance log parsing system using a distributed event-driven architecture, to ingest data in a data warehouse (Elasticsearch in this case).
 
 <br>
 
@@ -23,13 +23,13 @@ In enterprise environments using Github Actions and OpenShift Container Platform
 
 ### Producer - Log Collection and Event Publishing
 
-The part is responsible for discovering new log data, storing it on AWS S3 & PostgreSQL, and triggering downstream processing through a kafka event publication.
+This part is responsible for pulling new log data, ingesting it on AWS S3 & PostgreSQL, and triggering downstream processing event stream to a Kafka topic.
 
 <br>
 
 ##### Apache Airflow DAG
 
-Using [Apache Airflow](https://airflow.apache.org/) to orchestrate log collection through a scheduled DAG cron-job that runs every 5 minutes. Airflow is good for scheduling, retry mechanisms, and monitoring capabilities essential for production ETL data pipelines.
+Using [Apache Airflow](https://airflow.apache.org/) to orchestrate log collection through a scheduled DAG cron-job running every 5 minutes (this is important, this must me the average run-time of the DAG itself). Airflow is good for scheduling, retry mechanisms, and monitoring capabilities essential for production ETL data pipelines.
 
 The DAG performs four key operations in sequence:
 1. Detects OCP deployments and links deployment IDs to GitHub Actions pipelines
@@ -91,7 +91,7 @@ def publish_to_kafka(deployment_key):
     producer.flush()
 ```
 
-The code above sends events to a random partition in the Kafka topic. In the current setup where Spark workers can consume from any partition, random partitioning works fine and provides good load balancing. However, as the system scales, teams may want to assign specific workers to specific partitions for any goated reason. In such cases, using the deployment key as a partition key ensures that related events consistently route to the same partition and eventually worker.
+The code above sends events to a random partition in the Kafka topic. In the current setup where Spark workers can consume from any partition, random partitioning works fine and provides good load balancing. However, as the system scales, teams may want to assign specific workers to specific partitions for any scalability issue/reason. In such cases, using the deployment key as a partition key ensures that related events consistently route to the same partition and eventually worker.
 
 <br>
 
