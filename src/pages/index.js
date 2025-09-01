@@ -92,7 +92,7 @@ export default function Home() {
           , and am currently open to Internship/Research opportunities for 2025.
         </p>
         <p>
-          I’m into swimming, basketball, and solving math olympiad problems. I
+          I’m into swimming, <Link href="/blog" className="introLink hover-underline-animation">blogging</Link>, and solving math olympiad problems. I
           also love talking about F1, physics, and the different food options
           here in Toronto. Feel free to shoot me an email at{" "}
           <a
