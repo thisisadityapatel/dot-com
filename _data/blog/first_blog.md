@@ -1,6 +1,6 @@
 # First Blog
 20th February, 2025
 
- Testing the blog page, it works...I think!
+ Testing the blog page, it works...looks like it does!
 
  – aditya

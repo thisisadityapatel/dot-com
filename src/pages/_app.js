@@ -3,18 +3,18 @@ import Head from 'next/head'
 import Sidenav1 from '../components/Sidenav1'
 import Sidenav2 from '../components/Sidenav2'
 import '@/styles/animations.css'
-import { Nunito } from 'next/font/google'
+import { Nunito_Sans } from 'next/font/google'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import { Analytics } from '@vercel/analytics/react';
 import Script from 'next/script'
 
-const nunito = Nunito({
+const nunitosans = Nunito_Sans({
   subsets: ['latin'],
   weight: ['400', '700']
 })
 
 export default function App({ Component, pageProps }) {
-  return <main className={nunito.className}>
+  return <main className={nunitosans.className}>
     <Head>
       <title>Aditya Patel</title>
       <meta charSet="utf-8" />
