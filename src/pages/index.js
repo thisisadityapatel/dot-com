@@ -6,7 +6,7 @@ import {
   faGithub,
   faLinkedin,
   faXTwitter,
-  faFilePdf
+  faFilePdf,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
@@ -51,14 +51,15 @@ export default function Home() {
           >
             TMU
           </Link>{" "}
-          in my senior year graduating in May 2026. Interested in distributed systems, backend engineering and infrastructure, I like challenging myself to do
-          things I’ve never accomplished before and I strive to learn, build,
-          and engineer stuff.
+          in my senior year graduating on May 2026. Interested in distributed
+          systems, backend engineering and infrastructure, I like challenging
+          myself to do things I’ve never accomplished before and I strive to
+          learn, build, and engineer stuff.
         </p>
         <p>
-          Currently interning again as a{" "}
+          In the past I have interned as a{" "}
           <span style={{ textDecoration: "underline" }}>
-            Software Engineering Intern
+            Software Engineer Intern
           </span>{" "}
           at{" "}
           <Link
@@ -89,12 +90,15 @@ export default function Home() {
           >
             Scotiabank GBM
           </Link>
-          , and am currently open to Internship/Research opportunities for 2025.
+          , and am currently open to 2026 new graduate opportunities.
         </p>
         <p>
-          I’m into swimming, <Link href="/blog" className="introLink hover-underline-animation">blogging</Link>, and solving math olympiad problems. I
-          also love talking about F1, physics, and the different food options
-          here in Toronto. Feel free to shoot me an email at{" "}
+          I’m into swimming,{" "}
+          <Link href="/blog" className="introLink hover-underline-animation">
+            blogging
+          </Link>
+          , F1, solving physics olympiad questions, and trying different food
+          options here in Toronto. Feel free to shoot me an email at{" "}
           <a
             className="hover-underline-animation introLink"
             href="mailto:adityakdpatel@gmail.com"
@@ -144,7 +148,14 @@ export default function Home() {
           <span style={{ fontSize: "130%" }} className="wave mx-1">
             {emoji}
           </span>{" "}
-          Copyright © {current_Date.getFullYear()}{" "}<Link href="https://www.linkedin.com/in/thisisadityapatel/" style={{ textDecoration: "underline" }} className="text-secondary">Aditya Patel</Link>
+          Copyright © {current_Date.getFullYear()}{" "}
+          <Link
+            href="https://www.linkedin.com/in/thisisadityapatel/"
+            style={{ textDecoration: "underline" }}
+            className="text-secondary"
+          >
+            Aditya Patel
+          </Link>
         </div>
       </div>
     </>
