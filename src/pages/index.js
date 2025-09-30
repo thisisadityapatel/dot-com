@@ -51,10 +51,11 @@ export default function Home() {
           >
             TMU
           </Link>{" "}
-          in my senior year graduating on May 2026. Interested in distributed
-          systems, backend engineering and infrastructure, I like challenging
-          myself to do things I’ve never accomplished before and I strive to
-          learn, build, and engineer stuff.
+          graduating on May 2026. Interested about developing distributed
+          systems, solving optimization problems, and building backend
+          infrastructure that stands up over time. I like challenging myself to
+          do things I’ve never accomplished before and I strive to learn, build
+          stuff.
         </p>
         <p>
           In the past I have interned as a{" "}
@@ -93,12 +94,9 @@ export default function Home() {
           , and am currently open to 2026 new graduate opportunities.
         </p>
         <p>
-          I’m into swimming,{" "}
-          <Link href="/blog" className="introLink hover-underline-animation">
-            blogging
-          </Link>
-          , F1, solving physics olympiad questions, and trying different food
-          options here in Toronto. Feel free to shoot me an email at{" "}
+          I’m into swimming, F1, solving physics olympiad questions, and trying
+          different food options here in Toronto. Feel free to shoot me an email
+          at{" "}
           <a
             className="hover-underline-animation introLink"
             href="mailto:adityakdpatel@gmail.com"
