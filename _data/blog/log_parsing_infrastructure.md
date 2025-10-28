@@ -3,7 +3,7 @@
 
 <br>
 
-I built distributed systems for log parsing in one of my past internships, and heres my documentation and take into designing such systems at scale. Modern CI/CD pipelines generate massive volume of unstructured log data containing absolute critical insights about deployment failures and performance bottlenecks, requiring real-time processing infrastructure to extract actionable data insights from these streams. This data can then be used to then generate DevOps Insights ([DevOps DORA](https://www.atlassian.com/devops/frameworks/dora-metrics), [DevOps SPACE](https://linearb.io/blog/space-framework) frameworks), clean datasets for machine learning models, or for blunt government regulatory needs.
+I built distributed systems for log parsing in one of my past internships, here's my understanding and take into designing such systems at scale. Modern CI/CD pipelines generate massive volume of unstructured log data containing absolute critical insights about deployment failures and performance bottlenecks, requiring real-time processing infrastructure to extract actionable data insights from these streams. This data can then be used to then generate DevOps Insights ([DevOps DORA](https://www.atlassian.com/devops/frameworks/dora-metrics), [DevOps SPACE](https://linearb.io/blog/space-framework) frameworks), clean datasets for machine learning models, or for blunt government regulatory needs.
 
 <br>
 
