@@ -3,13 +3,13 @@
 
 <br>
 
-I built systems for distributed log parsing in one of my past internships, here is my take and understanding on designing such scalable infrastructure. Modern CI/CD pipelines generate massive volumes of unstructured log data that contain critical insights about deployment failures and performance bottlenecks, requiring real-time processing infrastructure to extract actionable data insights from these streams. This data can then be used to then generate DevOps Insights ([DevOps DORA](https://www.atlassian.com/devops/frameworks/dora-metrics), [DevOps SPACE](https://linearb.io/blog/space-framework) frameworks), clean datasets for machine learning models, or for government regulatory needs.
+I built distributed systems for log parsing in one of my past internships, and heres my documentation and take into designing such systems at scale. Modern CI/CD pipelines generate massive volume of unstructured log data containing absolute critical insights about deployment failures and performance bottlenecks, requiring real-time processing infrastructure to extract actionable data insights from these streams. This data can then be used to then generate DevOps Insights ([DevOps DORA](https://www.atlassian.com/devops/frameworks/dora-metrics), [DevOps SPACE](https://linearb.io/blog/space-framework) frameworks), clean datasets for machine learning models, or for blunt government regulatory needs.
 
 <br>
 
 ### Why
 
-In my case the deployment were in Github Actions + OpenShift Container Platform, development teams deploy applications hundreds or thousands of times per day across multiple environments, cloud providers (AWS, GCP), and deployment tools. This technical blog walks through building a high performance log parsing system using a distributed event-driven architecture, to ingest data in a data warehouse (Elasticsearch in this case).
+In my case the deployment platform was a combination of Github Actions + OpenShift Container Platform (OCP), with applications being hundreds or thousands of times per day across multiple environments, cloud providers (AWS, GCP), and 3rd party deployment assistance tools. This technical blog walks through building a high performance log parsing system using a distributed event-driven architecture, to ingest data in a data warehouse (Elasticsearch in this case).
 
 <br>
 
