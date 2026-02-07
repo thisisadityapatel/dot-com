@@ -40,9 +40,9 @@ function App() {
       </p>
 
       <p>
-        Currently improving on my golf swing, picking up bouldering and halfway 
+        Currently improving on my golf swing, picked up bouldering and halfway 
         into reading <a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/" target="_blank" rel="noopener noreferrer">Designing Data-Intensive Applications</a>. 
-        I will also try to <a href="https://blog.aditya-patel.com" target="_blank" rel="noopener noreferrer">blog</a> more of my thoughts and ideas in the future.</p>
+        I'll also try to <a href="https://blog.aditya-patel.com" target="_blank" rel="noopener noreferrer">blog</a> more of my thoughts and ideas in the future.</p>
 
       <p className="email">
         email me: adityakdpatel[at]gmail[dot]com
