@@ -252,13 +252,13 @@ p a {
   align-items: center;
   margin-top: 3rem;
   padding-top: 2rem;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   opacity: 0.8;
   gap: 2rem;
 }
 
 .footer-text {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.6;
   margin: 0;
 }
@@ -277,4 +277,114 @@ p a {
 
 .footer-links a {
   text-decoration: underline;
+}
+
+/* ================================
+   Email
+   ================================ */
+
+.email {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+/* ================================
+   Dot Ripple Effect
+   ================================ */
+
+.dot-ripple {
+  position: relative;
+  display: inline-block;
+  color: #DAA520;
+}
+
+.dot-ripple::before {
+  content: '●';
+  position: relative;
+  z-index: 2;
+}
+
+.dot-ripple::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: #DAA520;
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: ripple 2s ease-out infinite;
+}
+
+@keyframes ripple {
+  0% {
+    width: 8px;
+    height: 8px;
+    opacity: 0.3;
+  }
+  100% {
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+  }
+}
+
+/* ================================
+   Mobile Responsive
+   ================================ */
+
+@media (max-width: 768px) {
+  /* Typography adjustments for mobile */
+  h1 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  /* Container padding for mobile */
+  .container {
+    padding: 40px 20px;
+  }
+
+  /* Navigation links stay horizontal on mobile */
+  .links {
+    gap: 1rem;
+  }
+
+  /* Experience section - stack job header vertically */
+  .job-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .date {
+    align-self: flex-start;
+    margin-top: 0.25rem;
+  }
+
+  /* Footer stacks vertically on mobile */
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  /* Footer links stay horizontal but move below text */
+  .footer-links {
+    align-self: flex-start;
+  }
+
+  /* Theme toggle adjustments */
+  .theme-toggle {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
 }
