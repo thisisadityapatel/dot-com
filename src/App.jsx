@@ -164,7 +164,7 @@ function App() {
 
       <footer className="footer">
         <p className="footer-text">
-          <span className="dot-ripple"></span>Checkout what my folks <a href="https://www.nish7.io/" target="_blank" rel="noopener noreferrer">Nishil</a>,  <a href="https://www.linkedin.com/in/neelfaganiya/" target="_blank" rel="noopener noreferrer">Neel</a> & <a href="https://bhavyamuni.com" target="_blank" rel="noopener noreferrer">Bhavya</a> up to.
+          <span className="dot-ripple"></span> Checkout what my folks <a href="https://www.nish7.io/" target="_blank" rel="noopener noreferrer">Nishil</a>,  <a href="https://www.linkedin.com/in/neelfaganiya/" target="_blank" rel="noopener noreferrer">Neel</a> & <a href="https://bhavyamuni.com" target="_blank" rel="noopener noreferrer">Bhavya</a> up to.
         </p>
         <div className="footer-links">
           <span>© {new Date().getFullYear()}</span>
