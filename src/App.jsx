@@ -34,16 +34,21 @@ function App() {
       </nav>
 
       <p>
-        Computer science undergraduate at TMU. Interested about distributed systems,
+        Computer science undergraduate at TMU. Interested about developing distributed systems,
         solving optimization problems, and building backend infrastructure that stands up over time.
         I like challenging myself to do things I've never accomplished before and I strive to learn, build and engineer stuff.
       </p>
+
+      <p>
+        Currently improving on my golf swing, picking up bouldering and halfway 
+        into reading <a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/" target="_blank" rel="noopener noreferrer">Designing Data-Intensive Applications</a>. 
+        I will also try to <a href="https://blog.aditya-patel.com" target="_blank" rel="noopener noreferrer">blog</a> more of my thoughts and ideas here in the future.</p>
 
       <p className="email">
         email me: adityakdpatel[at]gmail[dot]com
       </p>
 
-      <section className="experience">
+      <section className="section">
         <h3 class="experience-header">Experience</h3>
 
         <article className="job">
@@ -94,7 +99,7 @@ function App() {
         <article className="job">
           <div className="job-header">
             <div>
-              <h3>Trade Floor Software Developer Intern</h3>
+              <h3>Trading Floor Software Developer Intern</h3>
               <p className="company">
                 <a href="https://www.gbm.scotiabank.com/en.html" target="_blank" rel="noopener noreferrer">
                   Scotiabank Capital Markets
@@ -115,6 +120,45 @@ function App() {
             <span className="date">aug 2021 — feb 2022</span>
           </div>
           <p className="tech-stack">java spring, react, typescript, terraform, aws</p>
+        </article>
+      </section>
+      <section className="section">
+        <h3 className="experience-header">Projects</h3>
+
+        <article className="project">
+          <p className="project-description">
+            <strong>kepler</strong> — LLM inference workbench orchestrating containerized llama.cpp (Docker) for benchmarking and evaluating models on GPU/CPU.
+          </p>
+          <p className="project-link">
+            <a href="https://github.com/thisisadityapatel/kepler" target="_blank" rel="noopener noreferrer">link</a> — python, llama.cpp, docker
+          </p>
+        </article>
+
+        <article className="project">
+          <p className="project-description">
+            <strong>botblitz</strong> — C++ game engine with OpenGL-based graphics pipeline for object modeling & real-time physics simulations.
+          </p>
+          <p className="project-link">
+            <a href="https://github.com/thisisadityapatel/botblitz" target="_blank" rel="noopener noreferrer">link</a> — c++, opengl
+          </p>
+        </article>
+
+        <article className="project">
+          <p className="project-description">
+            <strong>deskgenius</strong> — Got bored on a 14 hour flight (Toronto - Mumbai), ended up building this 3D desktop setup visulization tool out of boredom.
+          </p>
+          <p className="project-link">
+            <a href="https://github.com/thisisadityapatel/deskgenius" target="_blank" rel="noopener noreferrer">link</a> — react, three fiber, mathematical vector calculations
+          </p>
+        </article>
+
+        <article className="project">
+          <p className="project-description">
+            <strong>just-servers</strong> — Low-level Go network servers (TCP/UDP network protocol), Terraform orchestrated on AWS EC2.
+          </p>
+          <p className="project-link">
+            <a href="https://github.com/thisisadityapatel/just-servers" target="_blank" rel="noopener noreferrer">link</a> — go, terraform, aws, networking
+          </p>
         </article>
       </section>
     </div>

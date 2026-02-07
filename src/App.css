@@ -18,7 +18,7 @@ body {
    ================================ */
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -41,7 +41,7 @@ h3 {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
 }
@@ -103,6 +103,11 @@ a:hover {
   font-size: 0.95rem;
 }
 
+p a {
+  text-decoration: underline;
+  font-style: italic;
+}
+
 /* ================================
    Components
    ================================ */
@@ -156,14 +161,14 @@ a:hover {
 }
 
 /* ================================
-   Experience Section
+   Section
    ================================ */
 
-.experience {
+.section {
   margin-top: 2rem;
 }
 
-.experience .experience-header{
+.section .experience-header{
   margin-bottom: 2rem;
   font-style: italic;
 }
@@ -176,7 +181,6 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 0.5rem;
   gap: 2rem;
 }
 
@@ -203,14 +207,37 @@ a:hover {
   opacity: 0.9;
 }
 
-.description {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
-}
-
 .tech-stack {
   font-style: italic;
   font-size: 0.95rem;
   opacity: 0.8;
+}
+
+/* ================================
+   Projects Section
+   ================================ */
+
+.project {
+  margin-bottom: 1.5rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.25rem;
+}
+
+.project-description strong {
+  font-weight: 700;
+}
+
+.project-link {
+  font-style: italic;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+
+.project-link a {
+  text-decoration: underline;
 }
