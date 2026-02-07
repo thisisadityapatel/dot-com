@@ -49,7 +49,7 @@ function App() {
       </p>
 
       <section className="section">
-        <h3 class="experience-header">Experience</h3>
+        <h3 class="experience-header">Work</h3>
 
         <article className="job">
           <div className="job-header">
@@ -164,7 +164,7 @@ function App() {
 
       <footer className="footer">
         <p className="footer-text">
-          <span className="dot-ripple"></span> Also checkout what my folks <a href="https://www.nish7.io/" target="_blank" rel="noopener noreferrer">Nishil</a>,  <a href="https://www.linkedin.com/in/neelfaganiya/" target="_blank" rel="noopener noreferrer">Neel</a> & <a href="https://bhavyamuni.com" target="_blank" rel="noopener noreferrer">Bhavya</a> up to.
+          <span className="dot-ripple"></span>Checkout what my folks <a href="https://www.nish7.io/" target="_blank" rel="noopener noreferrer">Nishil</a>,  <a href="https://www.linkedin.com/in/neelfaganiya/" target="_blank" rel="noopener noreferrer">Neel</a> & <a href="https://bhavyamuni.com" target="_blank" rel="noopener noreferrer">Bhavya</a> up to.
         </p>
         <div className="footer-links">
           <span>© {new Date().getFullYear()}</span>
