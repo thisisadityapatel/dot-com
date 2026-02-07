@@ -288,47 +288,8 @@ p a {
   opacity: 0.8;
 }
 
-/* ================================
-   Dot Ripple Effect
-   ================================ */
-
 .dot-ripple {
-  position: relative;
-  display: inline-block;
   color: #DAA520;
-}
-
-.dot-ripple::before {
-  content: '●';
-  position: relative;
-  z-index: 2;
-}
-
-.dot-ripple::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 8px;
-  height: 8px;
-  background-color: #DAA520;
-  border-radius: 50%;
-  opacity: 0.4;
-  animation: ripple 2s ease-out infinite;
-}
-
-@keyframes ripple {
-  0% {
-    width: 8px;
-    height: 8px;
-    opacity: 0.3;
-  }
-  100% {
-    width: 20px;
-    height: 20px;
-    opacity: 0;
-  }
 }
 
 /* ================================

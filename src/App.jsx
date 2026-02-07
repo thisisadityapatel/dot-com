@@ -29,7 +29,7 @@ function App() {
       <nav className="links">
         <a href="https://github.com/thisisadityapatel" target="_blank" rel="noopener noreferrer">github</a>
         <a href="https://linkedin.com/in/thisisadityapatel" target="_blank" rel="noopener noreferrer">linkedin</a>
-        <a href="https://blog.aditya-patel.com" rel="noopener noreferrer">blog <span className="dot-ripple"></span>
+        <a href="https://blog.aditya-patel.com" rel="noopener noreferrer">blog <span className="dot-ripple">●</span>
         </a>
       </nav>
 
@@ -164,7 +164,7 @@ function App() {
 
       <footer className="footer">
         <p className="footer-text">
-          <span className="dot-ripple"></span> Checkout what my folks <a href="https://www.nish7.io/" target="_blank" rel="noopener noreferrer">Nishil</a>,  <a href="https://www.linkedin.com/in/neelfaganiya/" target="_blank" rel="noopener noreferrer">Neel</a> & <a href="https://bhavyamuni.com" target="_blank" rel="noopener noreferrer">Bhavya</a> up to.
+          <span className="dot-ripple">●</span> Checkout what my folks <a href="https://www.nish7.io/" target="_blank" rel="noopener noreferrer">Nishil</a>, <a href="https://bhavyamuni.com" target="_blank" rel="noopener noreferrer">Bhavya</a> & <a href="https://www.linkedin.com/in/neelfaganiya/" target="_blank" rel="noopener noreferrer">Neel</a> are up to.
         </p>
         <div className="footer-links">
           <span>© {new Date().getFullYear()}</span>
