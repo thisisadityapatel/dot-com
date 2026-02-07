@@ -29,7 +29,8 @@ function App() {
       <nav className="links">
         <a href="https://github.com/thisisadityapatel" target="_blank" rel="noopener noreferrer">github</a>
         <a href="https://linkedin.com/in/thisisadityapatel" target="_blank" rel="noopener noreferrer">linkedin</a>
-        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">resume</a>
+        <a href="https://blog.aditya-patel.com" rel="noopener noreferrer">blog <span style={{ color: '#DAA520' }}>●</span>
+        </a>
       </nav>
 
       <p>
@@ -52,13 +53,12 @@ function App() {
               <p className="company">
                 <a href="https://www.wealthsimple.com/en-ca" target="_blank" rel="noopener noreferrer">
                   Wealthsimple
-                </a>
-                — Distributed Trading Systems
+                </a> — Distributed Trading Systems
               </p>
             </div>
             <span className="date">may 2025 — dec 2025</span>
           </div>
-          <p className="tech-stack">python, temporal, aws, kubernetes, sql, docker</p>
+          <p className="tech-stack">python, sql, temporal, aws, kubernetes, docker, airflow</p>
         </article>
 
         <article className="job">
@@ -68,8 +68,7 @@ function App() {
               <p className="company">
                 <a href="https://www.wealthsimple.com/en-ca" target="_blank" rel="noopener noreferrer">
                   Wealthsimple
-                </a>
-                — Order Generation
+                </a> — Order Generation
               </p>
             </div>
             <span className="date">may 2024 — aug 2024</span>
@@ -84,24 +83,22 @@ function App() {
               <p className="company">
                 <a href="https://rbcborealis.com/" target="_blank" rel="noopener noreferrer">
                   RBC Borealis AI
-                </a>
-                — ML & Data Platform
+                </a> — ML & Data Platform
               </p>
             </div>
             <span className="date">may 2023 — apr 2024</span>
           </div>
-          <p className="tech-stack">c++, python, apache airflow, spark, kafka, tensorflow, aws, langchain</p>
+          <p className="tech-stack">python, c++, spark, kafka, airflow, tensorflow, aws, langchain</p>
         </article>
 
         <article className="job">
           <div className="job-header">
             <div>
-              <h3>Software Developer Intern</h3>
+              <h3>Trade Floor Software Developer Intern</h3>
               <p className="company">
                 <a href="https://www.gbm.scotiabank.com/en.html" target="_blank" rel="noopener noreferrer">
                   Scotiabank Capital Markets
-                </a>
-                — Trade Desk Tooling
+                </a> — Trade Desk Tooling
               </p>
             </div>
             <span className="date">may 2022 — aug 2022</span>
