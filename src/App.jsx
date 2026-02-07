@@ -42,7 +42,7 @@ function App() {
       <p>
         Currently improving on my golf swing, picking up bouldering and halfway 
         into reading <a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/" target="_blank" rel="noopener noreferrer">Designing Data-Intensive Applications</a>. 
-        I will also try to <a href="https://blog.aditya-patel.com" target="_blank" rel="noopener noreferrer">blog</a> more of my thoughts and ideas here in the future.</p>
+        I will also try to <a href="https://blog.aditya-patel.com" target="_blank" rel="noopener noreferrer">blog</a> more of my thoughts and ideas in the future.</p>
 
       <p className="email">
         email me: adityakdpatel[at]gmail[dot]com
@@ -161,6 +161,15 @@ function App() {
           </p>
         </article>
       </section>
+
+      <footer className="footer">
+        <span>Aditya Patel © {new Date().getFullYear()}</span>
+        <div className="footer-links">
+          <a href="https://github.com/thisisadityapatel" target="_blank" rel="noopener noreferrer">github</a>
+          <a href="https://linkedin.com/in/thisisadityapatel" target="_blank" rel="noopener noreferrer">linkedin</a>
+          <a href="https://blog.aditya-patel.com" target="_blank" rel="noopener noreferrer">blog</a>
+        </div>
+      </footer>
     </div>
   )
 }
