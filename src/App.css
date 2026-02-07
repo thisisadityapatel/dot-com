@@ -252,13 +252,27 @@ p a {
   align-items: center;
   margin-top: 3rem;
   padding-top: 2rem;
-  font-size: 1rem;
+  font-size: 0.95rem;
   opacity: 0.8;
+  gap: 2rem;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.footer-text a {
+  text-decoration: underline;
+  font-style: italic;
 }
 
 .footer-links {
   display: flex;
   gap: 1rem;
+  align-items: center;
+  white-space: nowrap;
 }
 
 .footer-links a {

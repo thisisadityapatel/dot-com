@@ -163,8 +163,11 @@ function App() {
       </section>
 
       <footer className="footer">
-        <span>Aditya Patel © {new Date().getFullYear()}</span>
+        <p className="footer-text">
+        <span style={{ color: '#DAA520' }}>●</span> Also checkout what my folks <a href="https://www.nish7.io/" target="_blank" rel="noopener noreferrer">Nishil</a> & <a href="https://bhavyamuni.com" target="_blank" rel="noopener noreferrer">Bhavya</a> up to.
+        </p>
         <div className="footer-links">
+          <span>© {new Date().getFullYear()}</span>
           <a href="https://github.com/thisisadityapatel" target="_blank" rel="noopener noreferrer">github</a>
           <a href="https://linkedin.com/in/thisisadityapatel" target="_blank" rel="noopener noreferrer">linkedin</a>
           <a href="https://blog.aditya-patel.com" target="_blank" rel="noopener noreferrer">blog</a>
