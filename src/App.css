@@ -1,0 +1,26 @@
+.container {
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: 1px solid currentColor;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+
+.theme-toggle:hover {
+  opacity: 0.7;
+}
+
+.theme-toggle:active {
+  opacity: 0.5;
+}
