@@ -14,10 +14,112 @@ function App() {
 
   return (
     <div className="container">
-      <button onClick={toggleTheme} className="theme-toggle">
-        {theme === 'light' ? 'dark' : 'light'}
-      </button>
+      <label className="theme-toggle">
+        <input
+          type="checkbox"
+          checked={theme === 'dark'}
+          onChange={toggleTheme}
+          aria-label="Toggle theme"
+        />
+        <span className="slider"></span>
+      </label>
+      
       <h1>Aditya Patel</h1>
+      
+      <nav className="links">
+        <a href="https://github.com/thisisadityapatel" target="_blank" rel="noopener noreferrer">github</a>
+        <a href="https://linkedin.com/in/thisisadityapatel" target="_blank" rel="noopener noreferrer">linkedin</a>
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">resume</a>
+      </nav>
+
+      <p>
+        Computer science undergraduate at TMU. Interested about distributed systems,
+        solving optimization problems, and building backend infrastructure that stands up over time.
+        I like challenging myself to do things I've never accomplished before and I strive to learn, build and engineer stuff.
+      </p>
+
+      <p className="email">
+        email me: adityakdpatel[at]gmail[dot]com
+      </p>
+
+      <section className="experience">
+        <h3 class="experience-header">Experience</h3>
+
+        <article className="job">
+          <div className="job-header">
+            <div>
+              <h3>Software Engineer Intern</h3>
+              <p className="company">
+                <a href="https://www.wealthsimple.com/en-ca" target="_blank" rel="noopener noreferrer">
+                  Wealthsimple
+                </a>
+                — Distributed Trading Systems
+              </p>
+            </div>
+            <span className="date">may 2025 — dec 2025</span>
+          </div>
+          <p className="tech-stack">python, temporal, aws, kubernetes, sql, docker</p>
+        </article>
+
+        <article className="job">
+          <div className="job-header">
+            <div>
+              <h3>Software Engineer Intern</h3>
+              <p className="company">
+                <a href="https://www.wealthsimple.com/en-ca" target="_blank" rel="noopener noreferrer">
+                  Wealthsimple
+                </a>
+                — Order Generation
+              </p>
+            </div>
+            <span className="date">may 2024 — aug 2024</span>
+          </div>
+          <p className="tech-stack">python, ruby on rails, react, graphql, aws</p>
+        </article>
+
+        <article className="job">
+          <div className="job-header">
+            <div>
+              <h3>Software Engineer Intern</h3>
+              <p className="company">
+                <a href="https://rbcborealis.com/" target="_blank" rel="noopener noreferrer">
+                  RBC Borealis AI
+                </a>
+                — ML & Data Platform
+              </p>
+            </div>
+            <span className="date">may 2023 — apr 2024</span>
+          </div>
+          <p className="tech-stack">c++, python, apache airflow, spark, kafka, tensorflow, aws, langchain</p>
+        </article>
+
+        <article className="job">
+          <div className="job-header">
+            <div>
+              <h3>Software Developer Intern</h3>
+              <p className="company">
+                <a href="https://www.gbm.scotiabank.com/en.html" target="_blank" rel="noopener noreferrer">
+                  Scotiabank Capital Markets
+                </a>
+                — Trade Desk Tooling
+              </p>
+            </div>
+            <span className="date">may 2022 — aug 2022</span>
+          </div>
+          <p className="tech-stack">c#, sql, javascript</p>
+        </article>
+
+        <article className="job">
+          <div className="job-header">
+            <div>
+              <h3>Lead Full Stack Developer</h3>
+              <p className="company">Stealth Startup</p>
+            </div>
+            <span className="date">aug 2021 — feb 2022</span>
+          </div>
+          <p className="tech-stack">java spring, react, typescript, terraform, aws</p>
+        </article>
+      </section>
     </div>
   )
 }

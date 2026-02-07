@@ -1,26 +1,216 @@
-.container {
-  padding: 2rem;
-  min-height: 100vh;
+/* ================================
+   Base & Reset
+   ================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ================================
+   Typography Base
+   ================================ */
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.875rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* ================================
+   Typography Utilities
+   ================================ */
+
+.text-large {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.text-small {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.text-muted {
+  opacity: 0.8;
+}
+
+/* ================================
+   Layout
+   ================================ */
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* ================================
+   Links & Navigation
+   ================================ */
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.links a {
+  text-decoration: underline;
+  font-size: 0.95rem;
+}
+
+/* ================================
+   Components
+   ================================ */
 
 .theme-toggle {
   position: fixed;
   top: 2rem;
   right: 2rem;
-  background: none;
-  border: 1px solid currentColor;
-  font-size: 0.9rem;
+  width: 48px;
+  height: 26px;
   cursor: pointer;
-  padding: 0.5rem 1rem;
-  font-family: inherit;
-  color: inherit;
-  transition: opacity 0.2s ease;
 }
 
-.theme-toggle:hover {
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.theme-toggle .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  border: 1.5px solid currentColor;
+  border-radius: 26px;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle .slider::before {
+  content: '';
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 2.5px;
+  background-color: currentColor;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle input:checked + .slider::before {
+  transform: translateX(22px);
+}
+
+.theme-toggle:hover .slider {
   opacity: 0.7;
 }
 
-.theme-toggle:active {
-  opacity: 0.5;
+/* ================================
+   Experience Section
+   ================================ */
+
+.experience {
+  margin-top: 2rem;
+}
+
+.experience .experience-header{
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.job {
+  margin-bottom: 2rem;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  gap: 2rem;
+}
+
+.job h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.25rem;
+}
+
+.company {
+  font-style: italic;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.company a {
+  text-decoration: underline;
+}
+
+.date {
+  font-size: 0.95rem;
+  white-space: nowrap;
+  opacity: 0.9;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.tech-stack {
+  font-style: italic;
+  font-size: 0.95rem;
+  opacity: 0.8;
 }
