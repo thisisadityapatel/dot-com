@@ -34,15 +34,14 @@ function App() {
       </nav>
 
       <p>
-        Computer science undergraduate at TMU. Interested about developing distributed systems,
-        solving optimization problems, and building backend infrastructure that stands up over time.
+        Interested about developing distributed systems, solving optimization problems and building scalable backend infrastructure that stands up over time.
         I like challenging myself to do things I've never accomplished before and I strive to learn, build and engineer stuff.
       </p>
 
       <p>
         Currently improving on my golf swing, picked up bouldering and halfway 
         into reading <a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/" target="_blank" rel="noopener noreferrer">Designing Data-Intensive Applications</a>. 
-        I'll also try to <a href="https://blog.aditya-patel.com" target="_blank" rel="noopener noreferrer">blog</a> more of my thoughts and ideas in the future.</p>
+        I'll also try to document more of my thoughts and ideas on this <a href="https://blog.aditya-patel.com" target="_blank" rel="noopener noreferrer">blog</a> in the future.</p>
 
       <p className="email">
         email me: adityakdpatel[at]gmail[dot]com
@@ -164,7 +163,7 @@ function App() {
 
       <footer className="footer">
         <p className="footer-text">
-          <span className="dot-ripple">●</span> Checkout what my folks <a href="https://www.nish7.io/" target="_blank" rel="noopener noreferrer">Nishil</a>, <a href="https://bhavyamuni.com" target="_blank" rel="noopener noreferrer">Bhavya</a> & <a href="https://www.linkedin.com/in/neelfaganiya/" target="_blank" rel="noopener noreferrer">Neel</a> are up to.
+          <span className="dot-ripple">●</span> Checkout what my folks <a href="https://www.nish7.io/" target="_blank" rel="noopener noreferrer">Nishil</a> & <a href="https://bhavyamuni.com" target="_blank" rel="noopener noreferrer">Bhavya</a> are up to.
         </p>
         <div className="footer-links">
           <span>© {new Date().getFullYear()}</span>
