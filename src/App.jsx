@@ -2,11 +2,35 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
-  const [theme, setTheme] = useState('dark')
+  // Get system theme preference
+  const getSystemTheme = () => {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark'
+    }
+    return 'light'
+  }
+
+  const [theme, setTheme] = useState(getSystemTheme)
 
   useEffect(() => {
     document.body.className = theme
   }, [theme])
+
+  // Listen for system theme changes
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+
+    const handleChange = (e) => {
+      setTheme(e.matches ? 'dark' : 'light')
+    }
+
+    // Modern browsers
+    mediaQuery.addEventListener('change', handleChange)
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange)
+    }
+  }, [])
 
   const toggleTheme = () => {
     setTheme(prev => prev === 'light' ? 'dark' : 'light')
