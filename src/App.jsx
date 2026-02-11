@@ -186,9 +186,6 @@ function App() {
       </section>
 
       <footer className="footer">
-        <p className="footer-text">
-          <span className="dot-ripple">●</span> Checkout what my folks <a href="https://www.nish7.io/" target="_blank" rel="noopener noreferrer">Nishil</a>, <a href="https://bhavyamuni.com" target="_blank" rel="noopener noreferrer">Bhavya</a> and <a href="https://neelfaganiya.vercel.app" target="_blank" rel="noopener noreferrer">Neel</a> are up to.
-        </p>
         <div className="footer-links">
           <span>© {new Date().getFullYear()}</span>
           <a href="https://github.com/thisisadityapatel" target="_blank" rel="noopener noreferrer">github</a>
