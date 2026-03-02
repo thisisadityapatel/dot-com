@@ -59,7 +59,6 @@ function App() {
 
       <p>
         Interested about developing distributed systems, solving optimization problems and building scalable backend infrastructure that stands up over time.
-        I like challenging myself to do things I've never accomplished before and I strive to learn, build and engineer stuff.
       </p>
 
       <p>
@@ -67,9 +66,9 @@ function App() {
         into reading <a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/" target="_blank" rel="noopener noreferrer">Designing Data-Intensive Applications</a>. 
         I'll also try to document more of my thoughts and ideas on this <a href="https://blog.aditya-patel.com" target="_blank" rel="noopener noreferrer">blog</a> in the future.</p>
 
-      <p className="email">
-        email me: adityakdpatel[at]gmail[dot]com
-      </p>
+      <div className="email">
+        <span>email me: adityakdpatel[at]gmail[dot]com</span>
+      </div>
 
       <section className="section">
         <h3 class="experience-header">Work</h3>
@@ -81,7 +80,7 @@ function App() {
               <p className="company">
                 <a href="https://www.wealthsimple.com/en-ca" target="_blank" rel="noopener noreferrer">
                   Wealthsimple
-                </a> — Distributed Trading Systems
+                </a> — Distributed Algorithmic Trading Systems
               </p>
             </div>
             <span className="date">may 2025 — dec 2025</span>
@@ -138,7 +137,7 @@ function App() {
           <div className="job-header">
             <div>
               <h3>Lead Full Stack Developer</h3>
-              <p className="company">Stealth Startup</p>
+              <p className="company">Stealth Startup — Infrastructure</p>
             </div>
             <span className="date">aug 2021 — feb 2022</span>
           </div>
@@ -159,7 +158,7 @@ function App() {
 
         <article className="project">
           <p className="project-description">
-            <strong>botblitz</strong> — C++ game engine with OpenGL-based graphics pipeline for object modeling & real-time physics simulations.
+            <strong>botblitz</strong> — C++ game engine with opengl-based graphics pipeline for object modeling & physics simulations.
           </p>
           <p className="project-link">
             <a href="https://github.com/thisisadityapatel/botblitz" target="_blank" rel="noopener noreferrer">link</a> — c++, opengl
@@ -168,7 +167,7 @@ function App() {
 
         <article className="project">
           <p className="project-description">
-            <strong>deskgenius</strong> — Got bored on a 14 hour flight (Toronto - Mumbai), ended up building this 3D desktop setup visulization tool out of boredom.
+            <strong>deskgenius</strong> — Got bored on a flight (toronto - mumbai), ended up building a 3D rendering tool for desktop visualization.
           </p>
           <p className="project-link">
             <a href="https://github.com/thisisadityapatel/deskgenius" target="_blank" rel="noopener noreferrer">link</a> — react, three fiber, mathematical vector calculations
@@ -177,7 +176,7 @@ function App() {
 
         <article className="project">
           <p className="project-description">
-            <strong>just-servers</strong> — Low-level Go network servers (TCP/UDP network protocol), Terraform orchestrated on AWS EC2.
+            <strong>just-servers</strong> — Low level Golang network servers (tcp/udp network protocol), Terraform orchestrated on AWS EC2.
           </p>
           <p className="project-link">
             <a href="https://github.com/thisisadityapatel/just-servers" target="_blank" rel="noopener noreferrer">link</a> — go, terraform, aws, networking
