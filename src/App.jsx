@@ -48,7 +48,7 @@ function App() {
         <span className="slider"></span>
       </label>
       
-      <h1>Aditya Patel</h1>
+      <h1>Aditya</h1>
       
       <nav className="links">
         <a href="https://github.com/thisisadityapatel" target="_blank" rel="noopener noreferrer">github</a>
