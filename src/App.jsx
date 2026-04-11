@@ -95,7 +95,7 @@ function App() {
               <p className="company">
                 <a href="https://www.wealthsimple.com/en-ca" target="_blank" rel="noopener noreferrer">
                   Wealthsimple
-                </a> — Order Generation
+                </a> — Order Generation Systems
               </p>
             </div>
             <span className="date">may 2024 — aug 2024</span>
@@ -121,7 +121,7 @@ function App() {
         <article className="job">
           <div className="job-header">
             <div>
-              <h3>Trading Floor Software Developer Intern</h3>
+              <h3>Trading Desk Software Developer Intern</h3>
               <p className="company">
                 <a href="https://www.gbm.scotiabank.com/en.html" target="_blank" rel="noopener noreferrer">
                   Scotiabank Capital Markets
@@ -136,7 +136,7 @@ function App() {
         <article className="job">
           <div className="job-header">
             <div>
-              <h3>Lead Full Stack Developer</h3>
+              <h3>Full Stack Developer - Lead</h3>
               <p className="company">Stealth Startup — Infrastructure</p>
             </div>
             <span className="date">aug 2021 — feb 2022</span>
