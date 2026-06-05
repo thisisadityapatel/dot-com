@@ -76,14 +76,14 @@ function App() {
         <article className="job">
           <div className="job-header">
             <div>
-              <h3>Software Engineer Intern</h3>
+              <h3>Software Engineering</h3>
               <p className="company">
                 <a href="https://www.wealthsimple.com/en-ca" target="_blank" rel="noopener noreferrer">
                   Wealthsimple
                 </a> — Distributed Algorithmic Trading Systems
               </p>
             </div>
-            <span className="date">may 2025 — dec 2025</span>
+            <span className="date">may 2025 — present</span>
           </div>
           <p className="tech-stack">python, sql, temporal, aws, kubernetes, docker, airflow</p>
         </article>
@@ -91,7 +91,7 @@ function App() {
         <article className="job">
           <div className="job-header">
             <div>
-              <h3>Software Engineer Intern</h3>
+              <h3>Software Engineering</h3>
               <p className="company">
                 <a href="https://www.wealthsimple.com/en-ca" target="_blank" rel="noopener noreferrer">
                   Wealthsimple
@@ -106,7 +106,7 @@ function App() {
         <article className="job">
           <div className="job-header">
             <div>
-              <h3>Software Engineer Intern</h3>
+              <h3>Machine Learning Software Engineer</h3>
               <p className="company">
                 <a href="https://rbcborealis.com/" target="_blank" rel="noopener noreferrer">
                   RBC Borealis AI
@@ -121,7 +121,7 @@ function App() {
         <article className="job">
           <div className="job-header">
             <div>
-              <h3>Trading Desk Software Developer Intern</h3>
+              <h3>Trading Desk Software Developer</h3>
               <p className="company">
                 <a href="https://www.gbm.scotiabank.com/en.html" target="_blank" rel="noopener noreferrer">
                   Scotiabank Capital Markets
@@ -136,7 +136,7 @@ function App() {
         <article className="job">
           <div className="job-header">
             <div>
-              <h3>Full Stack Developer - Lead</h3>
+              <h3>Member of Technical Staff</h3>
               <p className="company">Stealth Startup — Infrastructure</p>
             </div>
             <span className="date">aug 2021 — feb 2022</span>
