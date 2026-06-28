@@ -136,8 +136,8 @@ function App() {
         <article className="job">
           <div className="job-header">
             <div>
-              <h3>Member of Technical Staff</h3>
-              <p className="company">Stealth Startup — Infrastructure</p>
+              <h3>Member of Technical Staff - Platform Engineering</h3>
+              <p className="company">Stealth Startup</p>
             </div>
             <span className="date">aug 2021 — feb 2022</span>
           </div>
@@ -149,7 +149,7 @@ function App() {
 
         <article className="project">
           <p className="project-description">
-            <strong>kepler</strong> — LLM inference workbench orchestrating containerized llama.cpp (Docker) for benchmarking and evaluating models on GPU/CPU.
+            <strong>kepler</strong> — LLM inference benchmarking CLI orchestrating containerized inference engines via Docker across macOS Metal GPUs.
           </p>
           <p className="project-link">
             <a href="https://github.com/thisisadityapatel/kepler" target="_blank" rel="noopener noreferrer">link</a> — python, llama.cpp, docker
